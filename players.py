@@ -26,7 +26,7 @@ class Players:
     def make_picks(self, name, week, the_picks):
         #picks is a list of tuples -> (name of team, bool - is_prime, bool - is_lock)
         if name not in self.d_p:
-            print "Error, player not in database"
+            print ("Error, player not in database")
             return
         picks = self.d_p[name]['picks']
         picks[str(week)] = {}

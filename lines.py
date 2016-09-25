@@ -24,7 +24,7 @@ class Lines:
 
     def lines(self):
         ll = []
-        l_double_names = ['New', 'Green', 'San', 'Tampa', 'Los']
+        l_double_names = ['New', 'Green', 'San', 'Tampa', 'Los', 'Kansas']
         for e in self.d['entries']:
             str_title = e['title'].split()
             t1 = str_title[0]
@@ -69,10 +69,10 @@ class Lines:
     def print_for_fb(self):
         ll = self.lines()
         for l in ll:
-            if l[3].isoweekday()==1 or (l[3].isoweekday()==7 and l[3].hour > 17):
-                print l[0], l[1], '@', l[2] , ' -> Prime'
+            if l[3].isoweekday()==1 or (l[3].isoweekday()==7 and l[3].hour > 17) or l[3].isoweekday()==4:
+                print(l[0], l[1], '@', l[2] , ' -> Prime')
             else:
-                print l[0], l[1], '@', l[2]
+                print(l[0], l[1], '@', l[2])
 
     def store_lines(self):
         ll = self.line()
