@@ -74,6 +74,16 @@ class Lines:
             else:
                 print(l[0], l[1], '@', l[2])
 
+    def print_for_site(self):
+        ll = self.lines()
+        str_ret = ''
+        for l in ll:
+            if l[3].isoweekday()==1 or (l[3].isoweekday()==7 and l[3].hour > 17) or l[3].isoweekday()==4:
+                str_ret =  str_ret + str(l[0]) + ' ' + str(l[1]) + ' @ ' + str(l[2]) + '<font style="color:red;"> - Prime</font></br>'
+            else:
+                str_ret =  str_ret + str(l[0]) + ' ' + str(l[1]) + ' @ ' + str(l[2]) + '</br>'
+        return str_ret
+
     def store_lines(self):
         ll = self.line()
 
