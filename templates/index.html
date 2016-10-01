@@ -1,0 +1,36 @@
+<html>
+    <head>
+		<title>Maynard Pickum</title>
+		<meta charset="utf-8" />
+		<meta name="description" content="Maynard Pickum">
+		<meta name="keywords" content="data science,big data,machine learning,consultant">
+		<meta name="author" content="JGartner">
+		<!--[if lte IE 8]><script src="assets/js/ie/html5shiv.js"></script><![endif]-->
+		<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles/torch_style.css') }}" />
+		<!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
+		<script src="assets/js/jquery.min.js"></script>
+		<script src="assets/js/skel.min.js"></script>
+		<script src="assets/js/util.js"></script>
+		<!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
+		<script src="assets/js/main.js"></script>
+		<script src="assets/js/d3/d3.min.js"></script>
+    </head>
+    <body>
+		<!-- Header -->
+        <div id="header">
+            <h1>Maynard Pickum</h1>
+            <p>
+                ...because I'm over copy and pasting to facebook.
+            </p>
+        </div>
+
+		<!-- Main -->
+		<div id="main">
+			<header class="major container 75%">
+                <h2>Lines for week {{ week }}:</h2>
+				{{ lines | safe }}
+			</header>
+
+		</div>
+    </body>
+</html>
